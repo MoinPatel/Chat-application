@@ -7,7 +7,7 @@ html
 
     meta(http-equiv="X-UA-Compatible", content="IE=edge")
 
-    title Hello World
+    title Private Web Chat
 
     meta(name="description", content="Hello World")
 
@@ -18,14 +18,38 @@ html
   body
 
     .wrapper
+    
+      h1 Private Web chat!
+      section.section
 
-      h1 Chat Server!
+    .connected
+
+      img#creatorImage(src='../img/unnamed.jpg')
+
+      .infoConnected
+
+        h2 Who are you?
+
+        br
+
+        form.loginForm
+
+          input#yourName(type='text', placeholder='Your nick name')
+          br
+
+          input#yourEmail(type='text', placeholder='Your email address')
+          br
+
+          input#yourEnter(type='submit', value='ENTER')
 
       div.messages
 
       input(type="text")
 
       a(href="#") Send a Message
+
+    
+    
 
     script(type="text/javascript", src="https://code.jquery.com/jquery-2.1.1.min.js")
 
