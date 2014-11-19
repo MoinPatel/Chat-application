@@ -15,41 +15,23 @@ html
 
     link(rel="stylesheet", href="assets/styles/main.css", type="text/css")
 
-  body
+   body
 
     .wrapper
-    
-      h1 Private Web chat!
-      section.section
 
-    .connected
-
-      img#creatorImage(src='../img/unnamed.jpg')
-
-      .infoConnected
-
-        h2 Who are you?
-
-        br
-
-        form.loginForm
-
-          input#yourName(type='text', placeholder='Your nick name')
-          br
-
-          input#yourEmail(type='text', placeholder='Your email address')
-          br
-
-          input#yourEnter(type='submit', value='ENTER')
-
-      div.messages
-
-      input(type="text")
-
-      a(href="#") Send a Message
-
+      //h1 Chat Server!
+      
+      //p Enter a suername:
+      //p#nickerror
+      //form#setNick
+        //input#nickname(size='35')
+        //input(type='submit')
     
     
+    #chat
+  form#send-message
+      input#message(size='35')
+      input(type='submit')
 
     script(type="text/javascript", src="https://code.jquery.com/jquery-2.1.1.min.js")
 
