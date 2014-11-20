@@ -19,19 +19,20 @@ app.get('/', function(req, res){
 // Handle Socket Connection
 io.on('connection', function(socket){
 
-  console.log('A User Connected');
+ 
 
   // Handle Message Event
-  socket.on('message', function(text, callback){
+  socket.on('new user', function(text, callback){
   	if (nicknames.indexOf(text) != -1){
 			callback(false);
-		} else{
+		} 
+		else{
 			callback(true);
 			socket.nickname = text;
 			nicknames.push(socket.nickname);
 			updateNicknames();
 		}
-    
+     console.log('A User Connected');
   });
   function updateNicknames(){
 		io.sockets.emit('usernames', nicknames);
