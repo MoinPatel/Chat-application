@@ -1,9 +1,9 @@
 {
-  "name": "Chat-application",
-  "description": "Private chat application",
+  "name": "socket-boilerplate",
+  "description": "Socket Boilerplate Project",
   "version": "0.0.0",
-  "homepage": "http://mpcreative.ca",
-  "author": "Moin Patel",
+  "homepage": "http://darcyclarke.me",
+  "author": "Darcy Clarke",
   "main": "server.js",
   "dependencies": {
     "express": "*",

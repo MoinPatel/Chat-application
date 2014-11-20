@@ -3,18 +3,17 @@
 jQuery(function($) {
 
     // Create New Socket Connection using Socket.io
-    var socket = io.connect();
-    var $messageForm = $('send-message');
-    var $messageBox = $('message');
-    var $chat = $('chat');
-    
-    
-    $messageForm.submit(function(e){
-      e.preventDefault();
-      socket.emit('send message',$messageBox.val());
-      $messageBox.val('');
+    var socket = io();
+
+    // Send A Message To The Server
+    $('a').on('click', function(){
+      var text = $('input').val();
+      socket.emit('message', text);
     });
-    socket.on('new message', function(data){
-      $chat.append(data + "<br/>");
+
+    // Recieve Update Event From The Server
+    socket.on('update', function(msg){
+      $('.messages').append(msg).append('<br>');
     });
+
 });
