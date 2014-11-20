@@ -20,28 +20,38 @@ app.get('/', function(req, res){
 io.on('connection', function(socket){
 
  
+ console.log('user conected, id: ' + socket.id)
 
   // Handle Message Event
-  socket.on('new user', function(text, callback){
-  	if (nicknames.indexOf(text) != -1){
-			callback(false);
-		} 
-		else{
-			callback(true);
-			socket.nickname = text;
-			nicknames.push(socket.nickname);
-			updateNicknames();
-		}
-     console.log('A User Connected');
+  socket.on('new user', function(name){
+  	if (nicknames.indexOf(name) != -1){
+		return;
+	}	 
+
+
+	socket.nickname = name;
+	nicknames.push(socket.nickname);
+	updateNicknames();
+		
+    console.log('A User under id: ' + socket.id + ' renamed to: ' + socket.nickname);
   });
-  function updateNicknames(){
+
+
+ 	function updateNicknames(){
 		io.sockets.emit('usernames', nicknames);
 	}
-  socket.on('send message', function(data){
+
+ 	socket.on('send message', function(text){
   		//io.emit('update', text);
-		io.sockets.emit('new message', {msg: text, nick: socket.nickname});
+
+  		console.log(text);
+		io.sockets.emit('new message', {
+			msg: text, 
+			nick: socket.nickname
+		});
 	});
-  socket.on('disconnect', function(data){
+
+	socket.on('disconnect', function(data){
 		if(!socket.nickname) return;
 		nicknames.splice(nicknames.indexOf(socket.nickname), 1);
 		updateNicknames();

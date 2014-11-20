@@ -19,21 +19,20 @@ html
 
     .wrapper
 
-      div#nickWrap
+      div.nickwrap
         p Enter a username:
         p#nickError
         form#setNick
           input#nickname(size='35')
-          input(type='submit')
+          button.rename rename
 
-      h1 Privat Chat Server!
+      h1 Private Chat Server!
     
       div.messages
 
       input#messageinput(type="text" placeholder="Enter your message")
 
-    
-      a(href="#") Send a Message
+      button Send a Message
 
       div.users
 

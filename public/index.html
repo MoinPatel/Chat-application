@@ -10,17 +10,18 @@
   </head>
   <body>
     <div class="wrapper">
-      <div id="nickWrap">
+      <div class="nickwrap">
         <p>Enter a username:</p>
         <p id="nickError"></p>
         <form id="setNick">
           <input id="nickname" size="35">
-          <input type="submit">
+          <button class="rename">rename</button>
         </form>
       </div>
-      <h1>Privat Chat Server!</h1>
+      <h1>Private Chat Server!</h1>
       <div class="messages"></div>
-      <input id="messageinput" type="text" placeholder="Enter your message"><a href="#">Send a Message</a>
+      <input id="messageinput" type="text" placeholder="Enter your message">
+      <button>Send a Message</button>
       <div class="users"></div>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
