@@ -19,14 +19,23 @@ html
 
     .wrapper
 
-      h1 Privat Chat Server!
+      div#nickWrap
+        p Enter a username:
+        p#nickError
+        form#setNick
+          input#nickname(size='35')
+          input(type='submit')
 
+      h1 Privat Chat Server!
+    
       div.messages
 
-      input(type="text" placeholder="Enter your message")
+      input#messageinput(type="text" placeholder="Enter your message")
 
     
       a(href="#") Send a Message
+
+      div.users
 
     script(type="text/javascript", src="https://code.jquery.com/jquery-2.1.1.min.js")
 
