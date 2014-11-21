@@ -4,26 +4,22 @@ jQuery(function($) {
 
     // Create New Socket Connection using Socket.io
     var socket = io();
-    var $nickForm = $('setNick');
+    var $nickForm = $('button.rename');
     var $nickError = $('nickError');
     var $nickBox = $('input#nickname');
     var $users = $('users');
     var $messageBox = $('input#messageinput');
     var $chat = $('div.messages');
 
-    $nickForm.submit(function(e){
-        e.preventDefault();
-        socket.emit('new user', $nickBox.val());
-         // function(data){
-          // if(data){
-          //   $('nickWrap').hide();
-          //   $('contentWrap').show();
-          // } else{
-          //   $nickError.html('That username is already taken!  Try again.');
-          // }
-        
-        
-      });
+    $nickForm.on('click', function(){
+      console.log($nickBox.val());
+      socket.emit('newUsername', $nickBox.val()); 
+    });
+
+    socket.on('newUser', function(name){
+      $('div.users').append($('<p>').text(name));
+    });
+
 
     $('button.rename').on('click', function(){
       socket.emit('new user', $nickBox.val());
@@ -49,6 +45,10 @@ jQuery(function($) {
     // Recieve Update Event From The Server
     socket.on('new message', function(msg){
       $chat.append('<b>' + msg.nick + ': </b>' + msg.msg + "<br/>");
+    });
+
+    socket.on('listOfUsers', function(list){
+      console.log(list);
     });
 
 });

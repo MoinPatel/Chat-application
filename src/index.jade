@@ -15,26 +15,31 @@ html
 
     link(rel="stylesheet", href="assets/styles/main.css", type="text/css")
 
+    link(href='http://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet' type='text/css')
+
   body
 
     .wrapper
+      h1 Quick Chat!
 
       div.nickwrap
         p Enter a username:
         p#nickError
-        form#setNick
+        div#setNick
           input#nickname(size='35')
-          button.rename rename
+          button.rename Submit
 
-      h1 Private Chat Server!
-    
+      div.textBox
+     
+      h1 Live Chat!
       div.messages
-
-      input#messageinput(type="text" placeholder="Enter your message")
-
-      button Send a Message
-
       div.users
+        h3 Available users
+      input#messageinput(type="text" placeholder="Enter your message")
+        
+      button(class="btn") Send a Message
+
+      
 
     script(type="text/javascript", src="https://code.jquery.com/jquery-2.1.1.min.js")
 

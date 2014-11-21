@@ -1,1 +1,100 @@
-*{margin:0;padding:0}body{font-family:sans-serif}.wrapper{background:#cccccc;width:980px;margin:0 auto;padding-top:10px;margin-bottom:10px}h1{font-size:35px;margin:5px 0px 0px 100px}.messages{display:block;border:1px solid gray;width:60%;background:white;min-height:500px;margin:15px 0px 0px 100px}a{text-decoration:none;font-size:14px;line-height:100%;display:inline-block;padding:10px 32px;border:1px solid gray;margin:10px 0px 10px 15px;border-radius:10px;background-color:#3498DB;border-bottom:5px solid #2980B9;text-shadow:0px -2px #2980B9;color:white}input{width:360px;font-size:14px;line-height:100%;display:inline-block;padding:10px 20px;border:1px solid gray;margin:10px 0px 0px 100px}.nickwrap{display:block;border:1px solid gray;width:60%;background:white;margin:15px 0px 0px 100px}form#setNick{background-color:aqua}
+* {
+  margin: 0;
+  padding: 0; }
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  background: black; }
+
+.wrapper {
+  background: #F56C59;
+  width: 80%;
+  margin: 0 auto;
+  padding-top: 10px;
+  margin-bottom: 10px; }
+
+h1 {
+  font-size: 35px;
+  text-align: center;
+  margin: 25px 0px 5px 0px; }
+
+input#nickname {
+  height: 25px;
+  width: 373px; }
+
+.nickwrap {
+  display: block;
+  border: 1px solid gray;
+  width: 60%;
+  background: white;
+  height: 200px;
+  margin: 0 auto;
+  padding-top: 40px; }
+
+div#setNick {
+  width: 64%;
+  margin: 0 auto; }
+
+.nickwrap p {
+  color: black;
+  font-size: 25px;
+  margin: 0px 0px 0px 200px; }
+
+button.rename {
+  width: 100%;
+  text-decoration: none;
+  font-size: 14px;
+  line-height: 100%;
+  display: inline-block;
+  padding: 10px 32px;
+  border: 1px solid gray;
+  margin: 15px 0px 0px 0px;
+  border-radius: 10px;
+  background-color: #3498DB;
+  border-bottom: 5px solid #2980B9;
+  text-shadow: 0px -2px #2980B9;
+  color: white; }
+
+.messages {
+  display: block;
+  border: 1px solid gray;
+  width: 80%;
+  background: #D7DBE1;
+  min-height: 500px;
+  color: black;
+  margin: 0 auto;
+  float: left; }
+
+.users {
+  float: left;
+  background: #414A52;
+  width: 19%;
+  height: 500px;
+  color: white; }
+
+input#messageinput {
+  margin: 1px -2px 25px 0px;
+  height: 60px;
+  width: 59%; }
+
+.btn {
+  padding: 10px;
+  padding: 30px 40px; }
+
+messages.b {
+  color: red; }
+
+input {
+  width: 423px;
+  font-size: 14px;
+  display: inline-block;
+  padding: 10px 20px;
+  border: 1px solid gray;
+  margin: 0 auto; }
+
+.textBox {
+  margin: 0 auto;
+  background-color: yellow; }
+
+.textBox {
+  background: orange; }

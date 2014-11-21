@@ -7,22 +7,27 @@
     <meta name="description" content="Hello World">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1.0, maximum-scale=1.0, minimal-ui">
     <link rel="stylesheet" href="assets/styles/main.css" type="text/css">
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet" type="text/css">
   </head>
   <body>
     <div class="wrapper">
+      <h1>Quick Chat!</h1>
       <div class="nickwrap">
         <p>Enter a username:</p>
         <p id="nickError"></p>
-        <form id="setNick">
+        <div id="setNick">
           <input id="nickname" size="35">
-          <button class="rename">rename</button>
-        </form>
+          <button class="rename">Submit</button>
+        </div>
       </div>
-      <h1>Private Chat Server!</h1>
+      <div class="textBox"></div>
+      <h1>Live Chat!</h1>
       <div class="messages"></div>
+      <div class="users">
+        <h3>Available users</h3>
+      </div>
       <input id="messageinput" type="text" placeholder="Enter your message">
-      <button>Send a Message</button>
-      <div class="users"></div>
+      <button class="btn">Send a Message</button>
     </div>
     <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
     <script type="text/javascript" src="https://cdn.socket.io/socket.io-1.1.0.js"></script>
