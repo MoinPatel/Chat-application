@@ -38,9 +38,7 @@ io.on('connection', function(socket){
 		socket.nickname = name;
 
 		nicknames.push(socket.nickname);
-		// updateNicknames();
-	    // console.log('A User under id: ' + socket.id + ' renamed to: ' + socket.nickname);
-  		
+		
   		io.emit('newUser', socket.nickname);
   	});
 

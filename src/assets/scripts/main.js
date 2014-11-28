@@ -2,7 +2,7 @@
 // Wait for DOM to Load
 jQuery(function($) {
 
-    // Create New Socket Connection using Socket.io
+    // Create New Socket Connection using Socket.io and passing different variables
     var socket = io();
     var $nickForm = $('button.rename');
     var $nickError = $('nickError');
